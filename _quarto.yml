@@ -1,11 +1,10 @@
 project:
   type: website
-  site-url: https://madgallop.github.io
-  output-dir: docs
+  output-dir: /docs
 
 website:
   title: "My Awesome CSCI 0451 Blog"
-  output-dir: docs
+  output-dir: /docs
   navbar:
     background: "#112a39"
     right:
