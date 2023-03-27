@@ -61,5 +61,12 @@
     "title": "Limits of the Quantitative Approach to Bias and Fairness Blog",
     "section": "Introduction",
     "text": "Introduction\n In his 2022 speech at Princeton University, professor of Computer Science Narayanan asserts that: “currently quantitative methods are primarily used to justify the status quo. I would argue that they do more harm than good” (Narayanan (2022)).\n At the heart of Naryanan’s position is his belief “that baked into the practice of quantitative methods is a worldview that sees the status quo as unproblematic” (2022, 3). He explains that qualitative methods tend to be overly simplistic (Ibid, 4) and subjective (Ibid, 16) and describes several ways in which qualitative research is limited in its ability to study discrimination (Ibid, 3). The following paper will outline Narayanan’s argument and contextualize quantitative research within a larger body of literature. Ultimately, it will provide an alternative framework to consider quantitative research, and suggest more equitable approaches to its methodology."
+  },
+  {
+    "objectID": "posts/quant_bias_blog/quantBiasBlog.html",
+    "href": "posts/quant_bias_blog/quantBiasBlog.html",
+    "title": "Limits of the Quantitative Approach to Bias and Fairness Blog",
+    "section": "",
+    "text": "References\n\nAhmad, Afra Saeed, Isaac Sabat, Rachel Trump-Steele, and Eden King. 2019. “Evidence-Based Strategies for Improving Diversity and Inclusion in Undergraduate Research Labs.” Frontiers in Psychology 10: 1305.\n\n\nArellano, Lucy. 2022. “Questioning the Science: How Quantitative Methodologies Perpetuate Inequity in Higher Education.” Education Sciences 12 (2): 116.\n\n\nBuolamwini, Joy, and Timnit Gebru. 2018. “Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification.” In Conference on Fairness, Accountability and Transparency, 77–91. PMLR.\n\n\nGillborn, David, Paul Warmington, and Sean Demack. 2018. “QuantCrit: Education, Policy,‘big Data’and Principles for a Critical Race Theory of Statistics.” Race Ethnicity and Education 21 (2): 158–79.\n\n\nNarayanan, Arvind. 2022. “The Limits of the Quantitative Approach to Discrimination.” Speech.\n\n\nOakley, Ann. 1998. “Gender, Methodology and People’s Ways of Knowing: Some Problems with Feminism and the Paradigm Debate in Social Science.” Sociology 32 (4): 707–31."
   }
 ]
