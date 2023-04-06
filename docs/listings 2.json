@@ -1,0 +1,13 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/linear_regression_blog/linear_regression_blog.html",
+      "/posts/quant_bias_blog/quantBiasBlog.html",
+      "/posts/penguins_blog/penguins_blog.html",
+      "/posts/regression_blog/LogisticRegressionBlogPost.html",
+      "/posts/perceptron_blog/perceptronBlogPost.html",
+      "/posts/example-blog-post/index.html"
+    ]
+  }
+]

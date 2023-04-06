@@ -15,10 +15,5 @@ format:
   html:
     title-block-banner: img/landscape.png
     title-block-banner-color: white
-    theme: morph
+    theme: sandstone
     css: styles.css
-
-
-
-
-
