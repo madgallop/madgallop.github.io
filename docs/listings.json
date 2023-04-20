@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/gebru_blog/GebruBlogpost.html",
       "/posts/linear_regression_blog/linear_regression_blog.html",
       "/posts/quant_bias_blog/quantBiasBlog.html",
       "/posts/penguins_blog/penguins_blog.html",

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Madeleine Gallop">
+<meta name="dcterms.date" content="2023-04-19">
+<meta name="description" content="This blog post includes a reflection on a recorded lecture by Dr.&nbsp;Timit Gebru, proposes a question for her based on this lecture and background research, and later will reflecton her talk to the wider Middlebury campus.">
+
+<title>My Awesome CSCI 0451 Blog - Learning from Timnit Gebru</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>
+    .quarto-title-block .quarto-title-banner {
+      color: white;
+background-image: url(../../img/landscape.png);
+background-size: cover;
+    }
+    </style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">My Awesome CSCI 0451 Blog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">About</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Learning from Timnit Gebru</h1>
+                  <div>
+        <div class="description">
+          This blog post includes a reflection on a recorded lecture by Dr.&nbsp;Timit Gebru, proposes a question for her based on this lecture and background research, and later will reflecton her talk to the wider Middlebury campus.
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Madeleine Gallop </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 19, 2023</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Next Monday, Dr.&nbsp;Timnit Gebru is coming to Middlebury to visit our class and give a talk to the wider campus community. I am excited to have the opportunity to learn from Dr.&nbsp;Gebru next week, as I found her research, advocacy, persistence, and honesty in sharing her personal experiences to be incredibly inspiring (even reading through her Wiki page made me a little emotional!)</p>
+<p>Dr.&nbsp;Gebru is a well-recognized voice in artificial intelligence and its ethical implications. She was born in Ethiopia and attended Stanford, then worked for Google and on projects such using Street View and deep learning to predict social variables of communities based on observations of cars in different places. Dr.&nbsp;Gebru experienced discrimination throughout her early life and professional career, and noticed a lack of Black researchers (and especially Black women) in AI. She founded Black in AI to provide a community for Black researchers in the field.</p>
+<p>In 2019, Gebru and other researchers called out Amazon’s facial-recognition system for model discrimination against darker-skinned females, and in 2020, when Gebru was the co-lead of its Ethical Artificial Intelligence Team, Google dismissed her for refusing to withdraw an unpublished research paper she co-authored on the dangers of large language models (i.e.&nbsp;bais, costs, deception). The incident became a public controversy, as over 7,000 people signed a letter condemning her firing.</p>
+<p>In December of 2021, Dr.&nbsp;Gebru launched the Distributed Artificial Intelligence Research Institute to research the effects of AI on marginalized communities.</p>
+</section>
+<section id="dr.-gebrus-2020-talk" class="level2">
+<h2 class="anchored" data-anchor-id="dr.-gebrus-2020-talk">Dr.&nbsp;Gebru’s 2020 Talk</h2>
+<p>In 2020, Dr.&nbsp;Gebru gave a talk as part of a Tutorial on Fairness, Accountability, Transparency, and Ethics (FATE) in Computer Vision at the conference on Computer Vision and Pattern Recognition.</p>
+<p>In this talk, I really appreciated Dr.&nbsp;Gebru’s honest description of the lack of diversity and representation in artificial intelligence. I also found it interesting that she feels there have been improvements in diversity in the machine learning field, but that computer vision is not quite there yet. As a woman in STEM fields, I have definitely experienced being one of only a few women in classes or at conferences or other events. Even in my Conservation Planning class this semester (which is a technical geography course based in Python), I am one of two women in the class. While I have experienced sexism, I have obviously never experienced intersectional discrimination, and value Dr.&nbsp;Gebru’s candor in describing her experiences.</p>
+<p>After speaking about her own experiences, Dr.&nbsp;Gebru discusses what computer vision is, and how it has the potential to disproportionately harm marginalized communities. She goes into the racist way that computer vision screens potential employees through facial recognition. She urges us to consider questions that we have engaged with a little bit in this course already, such as who produces these technologies, and what groups they serve/leave out. She brings up an important quote from Mimi Onuoha, which describes how “Every data set that involves people implies subjects and objects… it is imperative to remember that on both sides we have human beings.” She discusses how in ML and a variety of other fields, we do not see a diversity in datasets. But she notes that even in cases where we do, they do little good if we do not think critically about how we acquire them.</p>
+<p>I think the main takeaways I have and one of the most important points that Dr.&nbsp;Gebru discusses is that making something fair is not equivalent to making it the same for everyone. Fairness is not about math or statistics, but more about society and social structure. Even tools that are inclusive of multiple communities can still do harm, and the tools that we rely on, such as in computer vision, disproportionately harm marginalized communities on a national level.</p>
+</section>
+<section id="question" class="level2">
+<h2 class="anchored" data-anchor-id="question">Question</h2>
+<p>You spoke at the end of your talk on fairness in computer vision at the conference on Computer Vision and Pattern Recognition about technology that harms and marginalizes various communities, as well as examples of refusal to combat these strategies. Since you gave this talk, have you seen improvements in either diversity in the field of computer vision or further examples of resistance to harmful technologies in the AI world?</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
