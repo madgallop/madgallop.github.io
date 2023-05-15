@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Madeleine Gallop">
+<meta name="dcterms.date" content="2023-05-16">
+<meta name="description" content="This blog post details a machine learning project to predict wildfires and wildfire area.">
+
+<title>My Awesome CSCI 0451 Blog - Wildfire Risk Project Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>
+    .quarto-title-block .quarto-title-banner {
+      color: white;
+background-image: url(../../img/landscape.png);
+background-size: cover;
+    }
+    </style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">My Awesome CSCI 0451 Blog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">About</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Wildfire Risk Project Blog</h1>
+                  <div>
+        <div class="description">
+          This blog post details a machine learning project to predict wildfires and wildfire area.
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Madeleine Gallop </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 16, 2023</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Climate change has increased the likelihood of a variety of extreme weather events, including wildfires. These extreme events pose definite risks to both human and ecological communities. At the same time, machine learning is emerging as an important predictive tool in natural disaster prevention; numerous studies have already used machine learning to classify risk of natural hazards. For example, Youssef et al.&nbsp;used with machine learning models to predict an area’s susceptibility to landslides, floods, and erosion in Saudi Arabia <span class="citation" data-cites="youssef2023multi">(<a href="#ref-youssef2023multi" role="doc-biblioref">Youssef et al. 2023</a>)</span>. This study experimented with a few different models, ultimately settling on Random Forest. In Choubin et al.’s study of avalanches in mountainous regions, Support Vector Machine (SVM) and Multivariate Discriminant Analysis were found to be the best models in assessing avalanche risk based on meteorological and locational data <span class="citation" data-cites="choubin2019snow">(<a href="#ref-choubin2019snow" role="doc-biblioref">Choubin et al. 2019</a>)</span>. Prior studies have also focused specifically on wildfire prediction. A 2023 paper even developed a new model to better predict burned areas in Africa and South America <span class="citation" data-cites="li2023attentionfire_v1">(<a href="#ref-li2023attentionfire_v1" role="doc-biblioref">Li et al. 2023</a>)</span>. In addition, the dataset used in our project to predict Portuguese fires was originally the topic of a 2007 paper focusing on training models on readily available meteorological data to predict the area of wildfires <span class="citation" data-cites="cortez2007data">(<a href="#ref-cortez2007data" role="doc-biblioref">Cortez and Morais 2007</a>)</span>. This study also experimented with different predictive features and models, finding SVM and random forest to be the best predictors <span class="citation" data-cites="cortez2007data">(<a href="#ref-cortez2007data" role="doc-biblioref">Cortez and Morais 2007</a>)</span>.</p>
+<p>In this project, we build on these prior studies, using many similar techniques and models. plan to use two datasets to predict wildfire likelihood and wildfire area given meteorological data. Our first dataset, the Algerian Forest Fires Dataset, contains fire and non-fire events with 11 attributes that describe weather characteristics at the time of that event. Our second dataset, the Forest Fires Dataset, contains data from Montesinho National Park, Portugal. This dataset contains many of the same weather characteristics as the Algerian dataset, but contains only fire events, and also includes the areas of these events. Rather than using this dataset to predict whether a fire occurred in a given area, we used it to predict the size a fire is likely to reach given certain meteorological conditions.</p>
+<p>Over the course of this project, we followed in the footsteps of prior studies, experimenting with different models to predict risk. We implemented several existing machine learning models such as Random Forest and Logistic Regression, ultimately choosing the models and sets of features that yielded the highest accuracy score. We trained and validated models on the Algerian dataset to predict whether or not a forest fire will occur given certain meteorological conditions and also trained/validated models on the Portugal dataset to predict forest fire area given many of the same features. After training and validating our models, we will examine feature importance across models, asking if the same features are most important in determining both wildfire risk and size.</p>
+<p>Although we trained our models with localized data, we also assessed the extent to which we could apply our models across datasets and geographies. Similarly to the multi-hazard susceptibility map produced by Youssef et al., we created a fire susceptibility map of fire risk using our models and county-level temperature and precipitation data for the entire United States <span class="citation" data-cites="youssef2023multi">(<a href="#ref-youssef2023multi" role="doc-biblioref">Youssef et al. 2023</a>)</span>. While we cannot assess the accuracy of this map directly, we can compare it to existing US wildfire prediction tools to at least visually assess our accuracy.</p>
+<p>Finally, we build on existing research to assess the ethics of using machine learning models in predicting risk of natural hazards. As Wagenaar et al.&nbsp;caution in their 2020 study of how machine learning will change flood risk and impact assessment, “applicability, bias and ethics must be considered carefully to avoid misuse” of machine learning algorithms <span class="citation" data-cites="wagenaar2020invited">(<a href="#ref-wagenaar2020invited" role="doc-biblioref">Wagenaar et al. 2020</a>)</span>. As extreme weather events become more prevalent with climate change, we must learn how to best predict and manage these events. The methods explored detail our own attempt to do so.</p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-choubin2019snow" class="csl-entry" role="doc-biblioentry">
+Choubin, Bahram, Moslem Borji, Amir Mosavi, Farzaneh Sajedi-Hosseini, Vijay P Singh, and Shahaboddin Shamshirband. 2019. <span>“Snow Avalanche Hazard Prediction Using Machine Learning Methods.”</span> <em>Journal of Hydrology</em> 577: 123929.
+</div>
+<div id="ref-cortez2007data" class="csl-entry" role="doc-biblioentry">
+Cortez, Paulo, and Anı́bal de Jesus Raimundo Morais. 2007. <span>“A Data Mining Approach to Predict Forest Fires Using Meteorological Data.”</span>
+</div>
+<div id="ref-li2023attentionfire_v1" class="csl-entry" role="doc-biblioentry">
+Li, Fa, Qing Zhu, William J Riley, Lei Zhao, Li Xu, Kunxiaojia Yuan, Min Chen, et al. 2023. <span>“AttentionFire_v1. 0: Interpretable Machine Learning Fire Model for Burned-Area Predictions over Tropics.”</span> <em>Geoscientific Model Development</em> 16 (3): 869–84.
+</div>
+<div id="ref-wagenaar2020invited" class="csl-entry" role="doc-biblioentry">
+Wagenaar, Dennis, Alex Curran, Mariano Balbi, Alok Bhardwaj, Robert Soden, Emir Hartato, Gizem Mestav Sarica, Laddaporn Ruangpan, Giuseppe Molinario, and David Lallemant. 2020. <span>“Invited Perspectives: How Machine Learning Will Change Flood Risk and Impact Assessment.”</span> <em>Natural Hazards and Earth System Sciences</em> 20 (4): 1149–61.
+</div>
+<div id="ref-youssef2023multi" class="csl-entry" role="doc-biblioentry">
+Youssef, Ahmed M, Ali M Mahdi, Mohamed M Al-Katheri, Soheila Pouyan, and Hamid Reza Pourghasemi. 2023. <span>“Multi-Hazards (Landslides, Floods, and Gully Erosion) Modeling and Mapping Using Machine Learning Algorithms.”</span> <em>Journal of African Earth Sciences</em> 197: 104788.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
