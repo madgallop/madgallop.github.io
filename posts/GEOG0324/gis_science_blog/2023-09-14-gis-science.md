@@ -3,7 +3,7 @@ title: "Is GIS a Science?"
 excerpt_separator: "<!--more-->"
 author: Madeleine Gallop
 date: '2023-09-14'
-image: gis_science.png
+image: gis-science.png
 description: "This blog discusses whether or not, in my experience, GIS can be a science in its own right."
 format: html
 ---
