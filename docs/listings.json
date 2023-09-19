@@ -2,7 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/GEOG0324/2023-09-19-reproducibility.html",
+      "/posts/GEOG0324/reproducibility_blog/2023-09-19-reproducibility.html",
+      "/posts/GEOG0324/gis_science_blog/2023-09-14-gis-science.html",
       "/posts/CSCI04/projectBlog/project_blog.html",
       "/posts/CSCI04/unsupervised_learning_blog/unsupervised_blog.html",
       "/posts/CSCI04/gebru_blog/GebruBlogpost.html",
