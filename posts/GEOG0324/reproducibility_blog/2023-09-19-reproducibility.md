@@ -6,6 +6,9 @@ author: Madeleine Gallop
 date: '2023-09-19'
 image: reprod.jpg
 description: "This blog debates whether or not open source science can provide a solution to the reproducibility crisis."
+categories:
+  - blog
+  - Open Source GIScience
 format: html
 ---
 
