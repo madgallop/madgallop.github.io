@@ -2,15 +2,16 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/projectBlog/project_blog.html",
-      "/posts/unsupervised_learning_blog/unsupervised_blog.html",
-      "/posts/gebru_blog/GebruBlogpost.html",
-      "/posts/linear_regression_blog/linear_regression_blog.html",
-      "/posts/quant_bias_blog/quantBiasBlog.html",
-      "/posts/penguins_blog/penguins_blog.html",
-      "/posts/regression_blog/LogisticRegressionBlogPost.html",
-      "/posts/perceptron_blog/perceptronBlogPost.html",
-      "/posts/example-blog-post/index.html"
+      "/posts/GEOG0324/2023-09-19-reproducibility.html",
+      "/posts/CSCI04/projectBlog/project_blog.html",
+      "/posts/CSCI04/unsupervised_learning_blog/unsupervised_blog.html",
+      "/posts/CSCI04/gebru_blog/GebruBlogpost.html",
+      "/posts/CSCI04/linear_regression_blog/linear_regression_blog.html",
+      "/posts/CSCI04/quant_bias_blog/quantBiasBlog.html",
+      "/posts/CSCI04/penguins_blog/penguins_blog.html",
+      "/posts/CSCI04/regression_blog/LogisticRegressionBlogPost.html",
+      "/posts/CSCI04/perceptron_blog/perceptronBlogPost.html",
+      "/posts/CSCI04/example-blog-post/index.html"
     ]
   }
 ]
