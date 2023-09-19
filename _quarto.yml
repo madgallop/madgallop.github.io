@@ -13,7 +13,7 @@ website:
 
 format:
   html:
-    title-block-banner: img/landscape.png
+    title-block-banner: img/mountains.jpg
     title-block-banner-color: white
     theme: sandstone
     css: styles.css

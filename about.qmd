@@ -10,4 +10,5 @@ about:
 
 ---
 
-Hi! My name is Madeleine. This blog documents my learning in CSCI 0451- Machine Learning in Spring 2023.
+Hi! My name is Madeleine. This blog documents my technical learning in CSCI 0451- Machine Learning in Spring 2023
+and in GEOG 0323- Open Source GIScience in Fall 2023. 
