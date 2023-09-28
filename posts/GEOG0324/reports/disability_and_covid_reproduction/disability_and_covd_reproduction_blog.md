@@ -20,6 +20,8 @@ format: html
     - description of modification(s) with rationale(s)
     - plan for visualizing/comparing/interpreting of results
 
+
+
 ## Step two: write
 - modify the analysis plan to address the issue identified above
 
