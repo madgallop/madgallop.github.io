@@ -157,28 +157,37 @@ background-size: cover;
 <p>The following report will plan and implement revisions to the reproduction of Chakraborty’s 2021 study, <em>Social Inequities in the distribution of COVID-19: An Intra-Catagorial Analysis of People with Disabilities in the U.S.</em> This study was reproduced by Joseph Holler, Junyi Zhou, Peter Kedron, Drew An-Pham, Derrick Burt, and I, Madeleine Gallop, will be implementing revisions to their work.</p>
 <p>In this report, I will be making six primary revisions:</p>
 <ol type="1">
-<li><em>MAP</em> The final choropleth map, depicting each county’s weight in the GEE model has a mistaken parameter causing it to only use half of the available orange color ramp. I plan to modfiy the code for this map to fix the color ramp.</li>
-<li><em>RATIONAL</em> The “rational for the updated report” section should, and currently does not, occur at the end of the reproduction study. I will move this section to the proper area.</li>
-<li><em>DISCUSSION</em> Emily’s discussion should be integrated into the existing discussion section. I will combine these two sections as I see fit.</li>
-<li><em>CONCLUSION</em> There is not a seperate conclusions section that concludes whether the reproduction attempt was successful, and waht the implications are for how the original study contributes to scientific knowledge. I will add this section, as it will help the audience understand the contributions of the original study to scientific knowledge.</li>
-<li><em>MISSING DATA</em> The horizontal orientation of the missing data table with Kable and/or KableExtra functions should be improved. I will fix the orientation of this table.</li>
-<li><em>CREATEMAP</em> There are certain ways the efficiency of the study could be improved, such as writing a general purpose function createMap that can be reused throughout the study. Hopefully encapsulating certain code blocks in a function will imrove the efficiency or elegancy of the code.</li>
+<li><p><em>MAP</em> The final choropleth map, depicting each county’s weight in the GEE model has a mistaken parameter causing it to only use half of the available orange color ramp. I plan to modfiy the code for this map to fix the color ramp.</p></li>
+<li><p><em>RATIONAL</em> The “rational for the updated report” section should, and currently does not, occur at the end of the reproduction study. I will move this section to the proper area.</p></li>
+<li><p><em>DISCUSSION</em> Emily’s discussion should be integrated into the existing discussion section. I will combine these two sections as I see fit.</p></li>
+<li><p><em>CONCLUSION</em> There is not a seperate conclusions section that concludes whether the reproduction attempt was successful, and waht the implications are for how the original study contributes to scientific knowledge. I will add this section, as it will help the audience understand the contributions of the original study to scientific knowledge.</p></li>
+<li><p><em>MISSING DATA</em> The horizontal orientation of the missing data table with Kable and/or KableExtra functions should be improved. I will fix the orientation of this table.</p></li>
+<li><p><em>CREATEMAP</em> There are certain ways the efficiency of the study could be improved, such as writing a general purpose function createMap that can be reused throughout the study. Hopefully encapsulating certain code blocks in a function will imrove the efficiency or elegancy of the code.</p></li>
 </ol>
 <p>In order to visualize and compare results, I plan to include before and after pictures of any visual changes, or orally describe the difference brought about by my revisions. I will include before and after screenshots of code blocks I modify, and write about any changes I make.</p>
 </section>
 <section id="implement-and-assess-changes-to-the-chakraborty-study" class="level2">
 <h2 class="anchored" data-anchor-id="implement-and-assess-changes-to-the-chakraborty-study">Implement and assess changes to the Chakraborty study</h2>
 <ol type="1">
-<li><em>MAP</em> In order to fix the final choropleth map, depicting each county’s weight in the GEE model, I</li>
-<li><em>RATIONAL</em> The “rational for the updated report” section should, and currently does not, occur at the end of the reproduction study. I will move this section to the proper area.</li>
-<li><em>DISCUSSION</em> Emily’s discussion should be integrated into the existing discussion section. I will combine these two sections as I see fit.</li>
-<li><em>CONCLUSION</em> There is not a seperate conclusions section that concludes whether the reproduction attempt was successful, and waht the implications are for how the original study contributes to scientific knowledge. I will add this section, as it will help the audience understand the contributions of the original study to scientific knowledge.</li>
-<li><em>MISSING DATA</em> The horizontal orientation of the missing data table with Kable and/or KableExtra functions should be improved. I will fix the orientation of this table.</li>
+<li><em>MAP</em> I made a slight adjustment to the code for the final choropleth map, depicting each county’s weight in the GEE model. I commented out the parameter <strong>“midpoint=0,”</strong> which ultimetly rendered a map that spanned the entire orange color ramp.</li>
+</ol>
+<p><em>before:</em> <img src="disability_and_covid_reproduction_blog_files/figure-html/619f8198-5186-4c91-ad0b-aab5935ae59b.png" class="img-fluid" alt="image.png"></p>
+<p><em>after:</em> <img src="disability_and_covid_reproduction_blog_files/figure-html/5f0f69af-26dd-4dc8-8306-84f803d7fbf9.png" class="img-fluid" alt="image.png"></p>
+<ol start="2" type="1">
+<li><p><em>RATIONAL</em> Originally, the section titled “Rational for the updated report” came before the section called “Emily’s Discussion.” I moved it to the very end of the study.</p></li>
+<li><p><em>DISCUSSION</em> To make the discussion of the results more comprehensive and conscise, I integrated Emily’s discussion section into the existing discussion section.</p></li>
+<li><p><em>CONCLUSION</em> There is not a seperate conclusions section that concludes whether the reproduction attempt was successful, and waht the implications are for how the original study contributes to scientific knowledge. I will add this section, as it will help the audience understand the contributions of the original study to scientific knowledge.</p></li>
+<li><p><em>MISSING DATA</em> I transposed the missing data table with Kable and/or KableExtra functions to be vertically oriented instead of horizontally oriented. I did this by piping t() after st_drop_geometry(). I also added a newline to create the table itself after modifying the data in it. Finally, I piped kable_styling() to add some lines and make the table more visually appealing.</p></li>
+</ol>
+<p><em>before:</em> <img src="disability_and_covid_reproduction_blog_files/figure-html/d241eada-a10c-47b2-8663-721b58d405c0.png" class="img-fluid" alt="Screenshot 2023-09-28 at 2.58.00 PM.png"></p>
+<p><em>after:</em> <img src="disability_and_covid_reproduction_blog_files/figure-html/1edae5cb-de2b-4608-aa7b-9921b03441e8.png" class="img-fluid" alt="Screenshot 2023-09-28 at 3.25.20 PM.png"></p>
+<ol start="6" type="1">
 <li><em>CREATEMAP</em> There are certain ways the efficiency of the study could be improved, such as writing a general purpose function createMap that can be reused throughout the study. Hopefully encapsulating certain code blocks in a function will imrove the efficiency or elegancy of the code.</li>
 </ol>
 </section>
 <section id="what-have-i-learned" class="level2">
 <h2 class="anchored" data-anchor-id="what-have-i-learned">What have I learned?</h2>
+<p>Making revisions to the reproduction of Chakraborty’s 2021 study, <em>Social Inequities in the distribution of COVID-19: An Intra-Catagorial Analysis of People with Disabilities in the U.S.</em></p>
 <ul>
 <li>write a blog post highlighting what you have learned from and contributed to with this reproduction and reanalysis study. In particular, please address these questions:
 <ul>

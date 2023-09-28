@@ -32,7 +32,7 @@ I will include before and after screenshots of code blocks I modify, and write a
 
 ## Implement and assess changes to the Chakraborty study
 
-1. *MAP* In order to fix the final choropleth map, depicting each county's weight in the GEE model, I 
+1. *MAP* The final choropleth map, depicting each county's weight in the GEE model has a mistaken parameter causing it to only use half of the available orange color ramp. I plan to modfiy the code for this map to fix the color ramp. 
 2. *RATIONAL* The "rational for the updated report" section should, and currently does not, occur at the end of the reproduction study. I will move this section to the proper area. 
 3. *DISCUSSION* Emily's discussion should be integrated into the existing discussion section. I will combine these two sections as I see fit. 
 4. *CONCLUSION* There is not a seperate conclusions section that concludes whether the reproduction attempt was successful, and waht the implications are for how the original study contributes to scientific knowledge. I will add this section, as it will help the audience understand the contributions of the original study to scientific knowledge. 
