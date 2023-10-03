@@ -152,6 +152,7 @@ background-size: cover;
 
 <section id="disability-and-covid-19-reproduction-blog" class="level1">
 <h1>Disability and COVID-19 Reproduction Blog</h1>
+<p>Please see the most up-to-date and revised verion of Chakraborty’s study here (R markdown file): https://github.com/madgallop/RPr-Chakraborty-2021/blob/main/procedure/code/01-RPr-Chakraborty.Rmd</p>
 <section id="identification-of-errors-and-plan-for-modification" class="level2">
 <h2 class="anchored" data-anchor-id="identification-of-errors-and-plan-for-modification">Identification of errors and plan for modification</h2>
 <p>The following report will plan and implement revisions to the reproduction of Chakraborty’s 2021 study, <em>Social Inequities in the distribution of COVID-19: An Intra-Catagorial Analysis of People with Disabilities in the U.S.</em> This study was reproduced by Joseph Holler, Junyi Zhou, Peter Kedron, Drew An-Pham, Derrick Burt, and Madeleine Gallop will be implementing revisions to their work.</p>
@@ -187,18 +188,45 @@ background-size: cover;
 </section>
 <section id="what-have-i-learned" class="level2">
 <h2 class="anchored" data-anchor-id="what-have-i-learned">What have I learned?</h2>
-<p>Through making revisions to the reproduction of Chakraborty’s 2021 study, <em>Social Inequities in the distribution of COVID-19: An Intra-Catagorial Analysis of People with Disabilities in the U.S.</em> , I learned about some of the challenges surrounding reproducibility.</p>
+<p>This reproduction and reanalysis study of Chakraborty’s (2021) research on the relationship between COVID-19 rates and demographic characteristics of people with disabilities in the continental United States has provided valuable insights into the challenges and opportunities of replicating scientific research.</p>
+<section id="importance-of-reproducibility" class="level3">
+<h3 class="anchored" data-anchor-id="importance-of-reproducibility">Importance of Reproducibility:</h3>
+<p>One of the primary lessons from this study is the critical importance of reproducibility in scientific research. Reproducing a study allows us to validate its findings and assess the robustness of its conclusions.</p>
+</section>
+<section id="sensitivity-to-methodological-choices" class="level3">
+<h3 class="anchored" data-anchor-id="sensitivity-to-methodological-choices">Sensitivity to Methodological Choices:</h3>
+<p>I’ve learned that small changes in methodology and computational environment can lead to variations in results. In this case, differences in the way spatial clusters were defined and COVID-19 risk was classified had notable effects on the outcomes. Researchers should be aware of the sensitivity of their analyses to such choices.</p>
+</section>
+<section id="complexity-of-spatial-epidemiology" class="level3">
+<h3 class="anchored" data-anchor-id="complexity-of-spatial-epidemiology">Complexity of Spatial Epidemiology:</h3>
+<p>Spatial analysis is a complex field, and the choice of statistical methods and software tools can impact the results. Researchers need to carefully consider the appropriateness of their analytical techniques for the specific research question and data at hand.</p>
+</section>
+<section id="ecological-fallacy-and-maup" class="level3">
+<h3 class="anchored" data-anchor-id="ecological-fallacy-and-maup">Ecological Fallacy and MAUP</h3>
+<p>The reproduction study and subsequent analysis highlighted the challenges posed by ecological fallacy and the modifiable areal unit problem (MAUP) in analyzing county-level data. These issues emphasize the importance of interpreting results cautiously and considering the spatial scale of analysis.</p>
+</section>
+<section id="methodological-changes" class="level3">
+<h3 class="anchored" data-anchor-id="methodological-changes">Methodological Changes:</h3>
+<p>The reproduction study deviated from the original study in several ways. 1. The reproduction study used the nonparametric Spearman’s correlation coefficient instead of Pearson’s correlation due to non-normal data, and redefining how COVID-19 risk clusters were classified. These changes were made to address limitations and improve the study’s rigor. 2. The reproduction study compared results between different software tools (SaTScan and SpatialEpi) for spatial cluster analysis, which revealed differences in cluster identification and relative risk calculations. 3. It also reconsidered how COVID-19 risk clusters were defined, opting for a cluster-based relative risk classification rather than a county-based one. This choice significantly impacted the results and the interpretation of clusters.</p>
+<p>Clearly, the reproduction study varied from the initial study in a number of ways. These deviations can be viewed as improvements and errors, depending on the specific aspect:</p>
 <ul>
-<li>write a blog post highlighting what you have learned from and contributed to with this reproduction and reanalysis study. In particular, please address these questions:
-<ul>
-<li>Has the reproduction deviated from the original study in any way?</li>
-<li>If so, are the deviations improvements or errors?</li>
-<li>Are there opportunities to further improve the study’s research design, reproducibility, or reproducibility for teaching purposes?</li>
-<li>Are there opportunities to design meaningful replication studies to further test any theories established by this study?</li>
-</ul></li>
+<li><p>Improvements: Some deviations, such as the use of Spearman’s correlation for non-normal data and the redefinition of cluster-based relative risk, were made to address methodological issues and improve the study’s validity.</p></li>
+<li><p>Errors: Deviations that led to differences in results, especially those that were not thoroughly justified or that introduced additional complexity without clear benefits, could be considered errors. For example, changes that created a larger number of GEE clusters added complexity to the analysis. But ultimetly, I think these differences ultimetly improved the study and contributed to a more accurate understanding of the results.</p></li>
 </ul>
+<section id="opportunities-for-improvement-and-further-research" class="level4">
+<h4 class="anchored" data-anchor-id="opportunities-for-improvement-and-further-research">Opportunities for Improvement and Further Research</h4>
+<ol type="1">
+<li><p>Clarity in Methodology: Ensuring clarity in the documentation of methodology, including detailed descriptions of how key parameters are determined, can improve the reproducibility of future studies.</p></li>
+<li><p>Alternative Statistical Approaches: Considering alternative statistical approaches for spatial epidemiology, particularly ones that account for spatial dependence without introducing unnecessary complexity, can lead to more robust findings.</p></li>
+<li><p>Individual-Level Analysis: Conducting individual-level analysis, where possible, can provide insights that go beyond ecological relationships and help mitigate issues related to ecological fallacy.</p></li>
+<li><p>Data Quality and Temporal Effects: Future studies should focus on collecting high-quality, up-to-date data to assess temporal effects more accurately, especially in rapidly changing situations like a pandemic.</p></li>
+<li><p>Replication Studies: To further test the theories established by this study, meaningful replication studies with larger sample sizes and diverse geographic regions should be conducted. These studies can help validate the findings and identify any regional variations.</p></li>
+</ol>
+<p>In conclusion, reproduction studies are essential for ensuring the validity and reliability of scientific research. They offer opportunities to improve research design, address methodological challenges, and contribute to the cumulative knowledge of a field. While deviations may occur, they should be justified, and their implications carefully considered. This study underscores the need for transparent reporting, robust methodology, and the ongoing pursuit of scientific rigor in spatial analysis of recent social trends and public health research.</p>
 
 
+</section>
+</section>
 </section>
 </section>
 
