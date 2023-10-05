@@ -185,6 +185,13 @@ background-size: cover;
 <ol start="6" type="1">
 <li><em>CREATEMAP</em> In order to increase the modularity, readability, consistency, and reuseability of the code, I defined a new function called ‘create_custom_map’ that takes various parameters as arguments and allows us to customize each map’s appearance and content. I turned the various variables that are special to different map vizualizations into function parameters. The function then uses these parameters to create a thematic map layer using the ‘tmap’ package. Thus, we are able to reuse the function to create different maps by specifying different values for these parameters. Now, when the code calls ‘create_custom_map’, each map will be customized. I applied changed the code for most of the maps in the reproduction study to use this function. I did not use the ‘create_custom_map’ function for a couple of the more complex maps in the reproduction study, including the Race Model Residual map (because the n=7 variable was difficult to generalize), and the SaTScan maps (due to their complexity). Creating a special function for map creation makes the overall code more modular and easy to read. It allows us to abstract away the details of map creation and focus on the uniqueness of each map. It also reduces inconsistencies between maps, and reduces the risk of errors.</li>
 </ol>
+<p><em>code for reuseable mapping</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="disability_and_covid_reproduction_blog_files/figure-html/90296199-3847-44f7-b303-82602a9e7a3a.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Screenshot 2023-10-05 at 10.49.38 AM.png</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="what-have-i-learned" class="level2">
 <h2 class="anchored" data-anchor-id="what-have-i-learned">What have I learned?</h2>
