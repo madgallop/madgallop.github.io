@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Madeleine Gallop">
+<meta name="dcterms.date" content="2023-10-10">
+<meta name="description" content="This blog discusses uncertainty in spatial/geographic research.">
+
+<title>Madeleine’s Epic Open Science and Computing Blog - Provenance, Error and Uncertainty</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>
+    .quarto-title-block .quarto-title-banner {
+      color: white;
+background-image: url(../../../../img/mountains.jpg);
+background-size: cover;
+    }
+    </style>
+
+
+<link rel="stylesheet" href="../../../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Madeleine’s Epic Open Science and Computing Blog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../about.html">About</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Provenance, Error and Uncertainty</h1>
+                  <div>
+        <div class="description">
+          This blog discusses uncertainty in spatial/geographic research.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">blog</div>
+                <div class="quarto-category">Open Source GIScience</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Madeleine Gallop </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 10, 2023</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="provenance-error-and-uncertainty-in-spatialgeographic-science" class="level1">
+<h1>Provenance, Error and Uncertainty in spatial/geographic science</h1>
+<section id="personal-experience" class="level2">
+<h2 class="anchored" data-anchor-id="personal-experience">Personal experience</h2>
+<p>Uncertainty has been a fundamental aspect of my own spatial/geographic research. I have encountered it in a number of ways, including data limitations, measurement errors, model assumptions, and inherently complex geographical phenomena.</p>
+<p>For example, when I worked on Professor Herb’s atlas project earlier in my time at Middlebury, we reckoned with incomplete global data sets, and how data from non “reputable” sources may affect the final product. We routinely combined data from a number of different sources to create a single global map, and keeping track of the data was consistently a tedious step. However, I now recognize the necessity of this step and keeping track of/explaining the data sources.</p>
+<p>I also encountered uncertaity in methods working as a GIS TA for GEOG120. When we graded papers, we initially had a single workflow we would compare each student’s workflow to for accuracy. However, over the course of the grading sessions, we would end up reproducing at least five student workflows to verify that the way the student documented their methods actually led to their results. Although tedious, this process taught me the importance of clearly delineating my own process in creating and reproducing geographic knowledge.</p>
+<p>The final example that comes to mind are the projects I worked on in Jeff’s Conservation Planning class. In this class, each person would pursue an independent project in Google Earth Engine to answer a question about Middlebury’s natural enviornment. Sometimes, the project would involve changing a single method in a completed script and writing functions to assess the differences cuased by this error. This course provided an excellent introduction to uncertainty in Geography, and a glimpse into the vast effects small changes in Geographic workflows can cause.</p>
+</section>
+<section id="the-geographers-responsibility" class="level2">
+<h2 class="anchored" data-anchor-id="the-geographers-responsibility">The Geographer’s Responsibility</h2>
+<p>In my opinion, geographers have several responsibilities when it comes to addressing uncertainty in research:</p>
+<ul>
+<li><p>Transparency: Geographers should be transparent about the sources of uncertainty in their data and methods. This includes clearly documenting data sources, measurement techniques, and any assumptions made in spatial analyses.</p></li>
+<li><p>Communication: Geographers should also communicate uncertainty to their audience effectively. This may involve using visual aids, such as error bars, to represent uncertainty in maps and graphs, or using appropriate statistical measures. It may also include blurbs or explanations regarding various data sets.</p></li>
+<li><p>Validation and Verification: Geographers should rigorously validate their models and data, where possible, to reduce uncertainty. Sensitivity analyses to assess the model’s vulnerability to changes in methods and model validation are important steps in this process.</p></li>
+<li><p>Interdisciplinary Collaboration: Collaboration with experts in statistics, remote sensing, and other related fields can help geographers better understand and mitigate uncertainty in their research. I think Geography is inhernetly interdisciplinary, and collaboration can ultimetly reduce unertainty. Collaboration is actually necessary in some contexts when addressing uncertainty.</p></li>
+</ul>
+</section>
+<section id="strategies-to-counter-uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="strategies-to-counter-uncertainty">Strategies to Counter Uncertainty</h2>
+<p>I think there are a number of strategies out there through which geographers can address uncertainty in thier research.</p>
+<ol type="1">
+<li><p>Better Data Quality: Geographers can improve the quality of the data they use by validating and cleaning it thoroughly.</p></li>
+<li><p>Transparent Documentation: Researchers can also clearly document your data sources, methods, and any assumptions they make.</p></li>
+<li><p>Visual Communication: Reports can include visual aids like error bars or shaded areas on maps to show uncertainty. Including uncertainty in the results section in addition to the geographer’s conclusion can help the reader understand the results in a broader context.</p></li>
+<li><p>Sensitivity Testing: Geographers can conduct sensitivity tests to assess how changes in thier input data or assumptions affect results.</p></li>
+<li><p>Collaboration: I think geographers have the responsibiity to work with experts from related fields, like statistics or remote sensing, to reduce uncertainty (or to learn methods from these disciplines themselves.)</p></li>
+</ol>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
