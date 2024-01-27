@@ -1,0 +1,28 @@
+path,name,format,description,metadata
+raw/private,MWI_adm2,.shp,GADM version 2.8 - traditional authorities,gadm_license.txt
+raw/private/datasets,MWGE62FL,.rds,USAID DHS Surveys Geographic Data for Malawi 2010,dhs-metadata.md; DHS_README.txt; DHS_GPS_Manual_English_A4_24May2013_DHSM9.pdf; DHS-Malawi-Survey-Boundaries.pdf; Guidelines on the use of DHS GPS data.pdf; location accuracy.pdf
+raw/private/datasets,MWHR61SV,.rds,USAID DHS Surveys Household Data for Malawi 2010,dhs-metadata.md; DHS Variables for Malawi 2010.pdf; 
+raw/public,dr1010ipeykx,.tif,UNEP - Drought Exposure,dr_physexp.xml; drought_physical_exposure.pdf; Global Risk Data Platform.pdf
+raw/public,fl1010irmt,.tif,UNEP - Flood Risk,fl_risk_md.xml; fl1010irmt.nfo; flood_risk.pdf;  Global Risk Data Platform.pdf
+raw/public,lhz,.csv,FEWS NET Livelihood Zone Focus Group Data summarized from spreadsheets provided by contact at FEWS NET,MW_LHZ_2009.pdf; mw_baseline_rural_en_2005.pdf; lhz_metadata.md
+raw/public,major_lakes,.csv,major lakes from OpenStreetMap provided by MASDAP,major_lakes.pdf; http://www.masdap.mw/showmetadata/xsl/365
+raw/public,MW_LHZ_2009,.shp,FEWS NET livelihood zones,MW_LHZ_2009.pdf; mw_baseline_rural_en_2005.pdf
+derived/public,ta_v,.gpkg,"Traditional Authorities from GADM, excluding water and conservation areas and fixing geometry errors",
+derived/private,fig4_georeferenced,.tif,Georeferenced image of Figure 4 in Malcomb et al 2010,fig4_georeferencing.pdf
+derived/public,ta_v_fig4,.gpkg,ta_v with digitized data from Malcomb et al figure 4,malcomb_fig4_classify.md; malcomb_fig4.png.points
+,,,,
+derived/public,results,.gpkg,fig5rep_final.png + fig4rep_final.png,
+derived/public,ta_capacity,.tif,,
+derived/public,georeferencingB,.gpkg,,
+derived/public,georef_bg,.gpkg,,
+derived/public,fig5diff,.tif,georef_bg.gpkg,
+derived/public,fig5or,.tif,georef_bg.gpkg,
+derived/public,fig5tif,.tif,georef_bg.gpkg,
+,,,,
+,,,,
+,,,,
+,,,,
+the path column will be raw/private  raw/public  derived/private  or derived/public,,,,
+the name will be the file name,,,,
+the source will be UNEP-GRID DHS Surveys or FEWSnet for raw dat a or it will be the data files used to create derived data,,,,
+the metadata will be a list of metadata files providing additional information on any raw data source.,,,,

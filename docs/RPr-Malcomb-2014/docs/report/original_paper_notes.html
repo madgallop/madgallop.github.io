@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Madeleine's Epic Open Science and Computing Blog – original_paper_notes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>
+    .quarto-title-block .quarto-title-banner {
+      color: white;
+background-image: url(../../../img/mountains.jpg);
+background-size: cover;
+    }
+    </style>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Madeleine’s Epic Open Science and Computing Blog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html">About</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+<section id="notes-from-the-paper" class="level1">
+<h1>NOTES FROM THE PAPER</h1>
+<section id="concepts" class="level2">
+<h2 class="anchored" data-anchor-id="concepts">Concepts</h2>
+<ul>
+<li>Adaptive capacity as “household-level assets to recover from disasters and access to resources” <code>2.2</code></li>
+<li>Exposure: “magnitude and frequency of forced that could stress a system” <code>2.2</code></li>
+<li>Sensitivity: “degree to which a system will respond to an external disturbing force”</li>
+<li>Resilience: “ability of a household to prepare for, respond to and recover from complex drivers of vulnerability”</li>
+</ul>
+</section>
+<section id="computational-environment" class="level2">
+<h2 class="anchored" data-anchor-id="computational-environment">Computational environment</h2>
+<ul>
+<li>STATA <code>4.4</code> to disaggregate DHS indicators + combine</li>
+<li>ArcGIS Software <code>4.6</code> to map + visualize</li>
+</ul>
+</section>
+<section id="spatialtemporal-extent" class="level2">
+<h2 class="anchored" data-anchor-id="spatialtemporal-extent">Spatial/temporal extent</h2>
+<ul>
+<li>Traditional Authorities level for DHS vulnerability indicators <code>4.4</code></li>
+<li>extent of Malawi (all territories data where data was available) <code>4.5</code></li>
+<li>temporal scale (2004 - 2010) <code>4.5</code></li>
+<li>exposure data had global extent <code>3.7</code></li>
+</ul>
+</section>
+<section id="field-research-trips" class="level2">
+<h2 class="anchored" data-anchor-id="field-research-trips">Field research trips</h2>
+<ul>
+<li>March 2011 <code>1.4</code></li>
+<li>August 2011 <code>1.4</code></li>
+<li>70 interviews <code>1.4</code></li>
+<li>List of interviewed organizations is provided in Appendix 1 and referenced in section <code>3.2</code></li>
+<li>11 village focus groups <code>1.4</code></li>
+<li>“multi-leveled, semi-structured interviews” <code>1.4</code></li>
+<li>interview themes: “perceptions of climate change, adaptation, governance, vulnerability, and foreign aid” <code>3.2</code></li>
+<li>“understanding household social and economic practices in the context of environmental uncertainty.” <code>3.2</code></li>
+</ul>
+</section>
+<section id="selecting-and-weighting-indicators" class="level2">
+<h2 class="anchored" data-anchor-id="selecting-and-weighting-indicators">Selecting and weighting indicators</h2>
+<ul>
+<li>transcribe and code interviews <code>3.3</code></li>
+<li>synthesize into four metathemes <code>3.3</code>
+<ul>
+<li>assets of land, livestock, income</li>
+<li>access to markets, food, water, health care, and labor</li>
+<li>livelihood sensitivity</li>
+<li>physical exposure to droughts and floods</li>
+</ul></li>
+<li>themes <code>3.3</code> and indicators <code>3.4, 3.5, 3.6, 3.7</code> contextualized in literature</li>
+<li>somewhere note collaboration with the DHS Survey folks and the FEWSNet folks as matter of convenience!</li>
+<li>Sources of Indicators <code>T1</code> and their weights <code>T2</code>
+<ul>
+<li>Assets: DHS Survey 20%</li>
+<li>Access: DHS Survey 20%</li>
+<li>Livelihood Sensitivity: Famine Early Warning Network 20%</li>
+<li>Biophysical Exposure: UNEP/GRID-Europe 40%</li>
+</ul></li>
+<li>expert opinion of interviewees used to select and weight indicators <code>4.2</code></li>
+</ul>
+<hr>
+<section id="weighting" class="level3">
+<h3 class="anchored" data-anchor-id="weighting">Weighting</h3>
+<ul>
+<li>based on expert opinion <code>4.2</code></li>
+<li>reduced weight for variables “not representative (of the total population) across the country” or potential for redundancy” <code>4.3</code></li>
+<li>“several iterations of the model using alternative weighting schemes resulted in a final product that but reflects Malawi’s contextual and perceptual vulnerability” <code>4.3</code></li>
+</ul>
+</section>
+<section id="normalizing" class="level3">
+<h3 class="anchored" data-anchor-id="normalizing">Normalizing</h3>
+<ul>
+<li>individual indicators normalized between 0 &amp; 5
+<ul>
+<li>0 = worst conditions (poorest quintile)</li>
+<li>5 = best condition (richest quintile)</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<section id="gadm" class="level3">
+<h3 class="anchored" data-anchor-id="gadm">GADM</h3>
+<ul>
+<li>Districts, prior to maps date of 2012 <code>F1</code></li>
+<li>Traditional Authorities <code>F3 &amp; F4 captions</code></li>
+</ul>
+</section>
+<section id="ciesin-gridded-population" class="level3">
+<h3 class="anchored" data-anchor-id="ciesin-gridded-population">CIESIN: Gridded Population</h3>
+<ul>
+<li>Figure 1 (not used anywhere else in paper)</li>
+</ul>
+</section>
+<section id="unep" class="level3">
+<h3 class="anchored" data-anchor-id="unep">UNEP</h3>
+<ul>
+<li>Physical Exposure Risk <code>1.4</code></li>
+</ul>
+</section>
+<section id="unepgrid-t2" class="level3">
+<h3 class="anchored" data-anchor-id="unepgrid-t2">UNEP/GRID (T2)</h3>
+<ul>
+<li>Dartmouth Flood Observatory
+<ul>
+<li>Data? <code>Fig 5</code> 1999 - 2007</li>
+</ul></li>
+<li>UNEP Global Risk Data Platform on droughts (2009) <code>F5</code></li>
+<li>Continuous raster <code>5.6</code></li>
+</ul>
+</section>
+<section id="fewsnet" class="level3">
+<h3 class="anchored" data-anchor-id="fewsnet">FEWSNET</h3>
+<ul>
+<li>Livlihood data <code>1.4</code></li>
+<li>FEWSNET 2005 <code>T2</code></li>
+<li>Malawi Vulnerability Assessment Committee (2005) <code>F5</code></li>
+<li>Livelihood Zones Area District from TAs <code>5.6</code></li>
+</ul>
+</section>
+<section id="usaid-dhs-surveys" class="level3">
+<h3 class="anchored" data-anchor-id="usaid-dhs-surveys">USAID DHS Surveys</h3>
+<ul>
+<li>household surveys, 2004 + 2010 <code>1.4</code></li>
+<li>over 38,5100 surveys <code>4.1</code></li>
+<li>25,000+ are women <code>4.1</code></li>
+</ul>
+</section>
+</section>
+<section id="theory-t1" class="level2">
+<h2 class="anchored" data-anchor-id="theory-t1">Theory (T1)</h2>
+<section id="physical-exposure-3.7-same-as-next-thing-same-reference" class="level3">
+<h3 class="anchored" data-anchor-id="physical-exposure-3.7-same-as-next-thing-same-reference">Physical Exposure (3.7) – same as next thing (same reference)</h3>
+<ul>
+<li>UNEP Global Disaster Risk Platform
+<ul>
+<li>risks of flood (Peduzzi 2011)</li>
+<li>drought exposure (Peduzzi 2012) based on
+<ul>
+<li>global monthly gridded precipitation dataset from the Climactic Research Unit (University of E. Angolia)</li>
+<li>global standardized precipitation index based on Brooklyn IRI Columbia</li>
+</ul></li>
+<li>designed by: UNEP Global Resource Information Database (GRID) Europe</li>
+</ul></li>
+</ul>
+</section>
+<section id="biophysical-exposure-40" class="level3">
+<h3 class="anchored" data-anchor-id="biophysical-exposure-40">Biophysical Exposure 40%</h3>
+<ul>
+<li>Floods &amp; rain variability, flood events <code>T1</code>
+<ul>
+<li>estimated risk for flood hazards 20% <code>T2</code></li>
+<li>Global estimated risk index for flood hazard <code>R w/ link</code></li>
+</ul></li>
+<li>Drought &amp; Dry Spells, drought indiices <code>T1</code>
+<ul>
+<li>exposition to drought events 20% <code>T2</code></li>
+<li>Physical exposition to drought events 1980 - 2001 <code>R w/ link</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="livelihood-sensitivity-20-3.6" class="level3">
+<h3 class="anchored" data-anchor-id="livelihood-sensitivity-20-3.6">Livelihood Sensitivity 20% (3.6)</h3>
+<ul>
+<li>interviews with MVAC</li>
+<li>data created in partnership with FEWSNET &amp; USAID</li>
+<li>pre-established livelihood zones - geographic areas where populations share characteristics of farming practices, labor, and enviro. coping strategies</li>
+<li>May to July 2003 Household Economy Approach baseline survey in 11 livelihood zones</li>
+<li>wealth groups created (poor [65%], middle, better-off) in process unique to each zone</li>
+</ul>
+<section id="indicators-of-livelihood-sensitivity" class="level4">
+<h4 class="anchored" data-anchor-id="indicators-of-livelihood-sensitivity">4 Indicators of Livelihood Sensitivity</h4>
+<ul>
+<li>“% of income that poor households receive from wage labor” <code>3.6</code>
+<ul>
+<li>income source; % poor income from labor <code>T1</code></li>
+<li>% income from wage labor 6% <code>T2</code></li>
+<li>report on livelihood zones linked in references (MVAC 2005)</li>
+</ul></li>
+<li>“% of food that poor households <em>receive independently from their own farm (??)</em> indication of sustainability of livelihoods <code>3.6</code>
+<ul>
+<li>ability to meet food needs; % food intake from personal farm <code>T1</code></li>
+<li>% of food from own farm 6% <code>T2</code></li>
+</ul></li>
+<li>“% of labor income that is susceptible to market shocks (i.e.&nbsp;tobacco, sugar, tea, &amp; coffee” <code>3.6</code>
+<ul>
+<li>cash crop exposure, % non-food crop (cotton, tobacco, tea) <code>T1</code></li>
+<li>% income from cash crops 4% <code>T2</code></li>
+</ul></li>
+<li>“ecological destruction associated with livelihood coping strategies during time of crisis” <code>3.6</code>
+<ul>
+<li>ecological coping effect; access to alternative form of income <code>T1</code></li>
+<li>disaster coping strategy 4% (FEWNET 2005) <code>T2</code></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="adaptive-capacity" class="level3">
+<h3 class="anchored" data-anchor-id="adaptive-capacity">Adaptive Capacity</h3>
+<ul>
+<li>40% AC includes:
+<ul>
+<li>20% assets</li>
+<li>20% access</li>
+<li><code>2.2 &amp; T2</code>, but <code>NOT 3.4, 3.5, or T1</code></li>
+</ul></li>
+<li>DHS 2004, 2020 <code>T2</code></li>
+<li>Demographic &amp; Health Survey from Malawi (2010) <code>F5</code></li>
+</ul>
+<section id="assets" class="level4">
+<h4 class="anchored" data-anchor-id="assets">Assets</h4>
+<ul>
+<li>larger landholders can diversify crops and sell food <code>3.4</code>
+<ul>
+<li>amount of arable land per HH <code>T1</code></li>
+<li>arable lands (hectares) 6%</li>
+</ul></li>
+<li>animals used as coping strategy <code>3.4</code>
+<ul>
+<li>livestock; number oof animals per HH by type <code>T1</code></li>
+<li>number of livestock units 4% <code>T2</code></li>
+</ul></li>
+<li>wealth (disposable capital assets) <code>3.4</code>
+<ul>
+<li>money; wealth index (based on owned <code>T1</code> assets)</li>
+<li>wealth index score 4% <code>T2</code></li>
+</ul></li>
+<li>good health <code>3.4</code>
+<ul>
+<li>sick in the past 12 months good health <code>T1</code></li>
+<li>in household sick in past 12 months 3% <code>T2</code></li>
+</ul></li>
+<li>orphans are a socially vulnerable set of the population orphan care adds burdens <code>3.4</code>
+<ul>
+<li>number of orphans or vulnerable children <code>T1</code></li>
+<li>number of orphans in households 3% <code>T2</code></li>
+</ul></li>
+<li>income (immediately accessible resources) <code>3.4</code>
+<ul>
+<li>NOT in <code>T1</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="access" class="level4">
+<h4 class="anchored" data-anchor-id="access">Access</h4>
+<ul>
+<li>to the electrical grid <code>3.5</code>
+<ul>
+<li>basics, electricity (Y/N) <code>T1</code></li>
+<li>electricity 3% <code>T2</code></li>
+</ul></li>
+<li>basics, cooking fuel type <code>T1</code>
+<ul>
+<li>NOT in section <code>3.5</code> unless you consider “selling of charcoal is one of the top coping strategies during periods of food insecurity and market shocks” <code>3.5</code></li>
+<li>type of cooking fuel 2% <code>T2</code></li>
+</ul></li>
+<li>burden of collecting water <code>3.5</code>
+<ul>
+<li>basics, water (time to source) <code>T1</code></li>
+<li>time to water source 4% <code>T2</code></li>
+</ul></li>
+<li>market access; rural, peri-urban, urban <code>T1</code>
+<ul>
+<li>NOT in section <code>3.5</code></li>
+<li>house setting (urban/rural) 2% <code>T2</code></li>
+</ul></li>
+<li>nearest vehicle-accessible road <code>3.5</code>
+<ul>
+<li>NOT in <code>T1</code></li>
+</ul></li>
+<li>radios <code>3.5</code>
+<ul>
+<li>technology sharing/own a radio (Y/N) <code>T1</code></li>
+<li>own a radio 3% <code>T2</code></li>
+</ul></li>
+<li>own a cell phone (Y/N)/media &amp; information <code>T1</code>
+<ul>
+<li>NOT in section <code>3.5</code></li>
+<li>own a cell phone 4% <code>T2</code></li>
+</ul></li>
+<li>households headed by females are more vulnerable based on less access to sources of power, land, and resources <code>3,5</code>
+<ul>
+<li>power and decision-making female-headed HH (Y/N) <code>T1</code></li>
+<li>sex of head of household 2% <code>T2</code></li>
+</ul></li>
+<li>households headed by one parent or by children (encompassed in the variable family structure) werre seen as more vulnerable
+<ul>
+<li>NOT in <code>T1</code></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="combining" class="level2">
+<h2 class="anchored" data-anchor-id="combining">Combining</h2>
+<ul>
+<li>each meta data theme converted to Raster format <code>4.6</code></li>
+<li>overall score calculated with map algebra <code>4.6</code></li>
+<li>household resilience = adaptive capacity + livelihood sensitivity - physical exposure <code>4.6</code></li>
+<li>final maps appears to be raster <code>F5</code></li>
+<li>resilience scores are 203 traditional authority (polygons) <code>F4</code></li>
+<li>“DHS Indicators were disaggregated to the village level” –&gt; “combined @ a suitable administrative level for analysis” <code>4.4</code></li>
+<li>“explanation on using survey data with GPS information is available from the DHS website and was instrumented this index” <code>4.4</code></li>
+<li>Malawi contained 28 administrative districts (but too large - an “inappropriate scale for household vulnerability dynamics”) <code>4.4</code> - hotspots of vulnerability would be lost</li>
+<li>“analysis of the weighted DHS vulnerability indicators was conducted at the administrative scale of Traditional Authorities”</li>
+<li>There are over 250 populated TAs in Malawi <code>4.4</code></li>
+<li>“Not every traditional authority had surveys conducted within its administrative boundaries” <code>5.2</code></li>
+<li>“TAs with missing information was indicated as ‘Areas Missing DHS Data’” <code>5.2</code></li>
+<li>“Fig 3 depicts household-level resilience using methatheme categories of assets and access spatially joined to traditional authorities” <code>5.2</code></li>
+</ul>
+</section>
+<section id="checking-results" class="level2">
+<h2 class="anchored" data-anchor-id="checking-results">Checking Results</h2>
+<ul>
+<li>203 TAs with Data in 2010 <code>F3</code></li>
+<li>Range of HH Resilience Scores from 11.48 - 25.77 <code>F3</code></li>
+<li>24,850 HH surveys in 2010 <code>5.2</code></li>
+<li>Blantyre District, TA Machinjili scored <code>3.9</code></li>
+<li>Machinga District, TA Mposa scored highest (max) “average household score nationwide was 17.63” <code>5.3</code></li>
+<li><code>F4</code>- Malawi Household Resiliences (2010)</li>
+<li>173 TA’s had temporal data (both 2004 &amp; 2010) <code>6.3</code></li>
+</ul>
+<section id="checking-results-on-our-end" class="level3">
+<h3 class="anchored" data-anchor-id="checking-results-on-our-end">Checking Results (on our end)</h3>
+<ul>
+<li>georeference</li>
+<li>zonal stats</li>
+<li>classify &amp; edit</li>
+<li>spearman’s rho</li>
+<li>cross tabs</li>
+<li>scatterplot</li>
+</ul>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

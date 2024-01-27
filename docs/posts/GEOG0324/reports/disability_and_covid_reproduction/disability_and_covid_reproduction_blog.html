@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Madeleine Gallop">
+<meta name="dcterms.date" content="2023-10-03">
+<meta name="description" content="The purpose of this blog is to reanalyze Chakraborty (2021) and finalize a reproduction report.">
+
+<title>Madeleine’s Epic Open Science and Computing Blog - Disability and COVID-19 Reproduction Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>
+    .quarto-title-block .quarto-title-banner {
+      color: white;
+background-image: url(../../../../img/mountains.jpg);
+background-size: cover;
+    }
+    </style>
+
+
+<link rel="stylesheet" href="../../../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Madeleine’s Epic Open Science and Computing Blog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../about.html">About</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Disability and COVID-19 Reproduction Blog</h1>
+                  <div>
+        <div class="description">
+          The purpose of this blog is to reanalyze Chakraborty (2021) and finalize a reproduction report.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">blog</div>
+                <div class="quarto-category">Open Source GIScience</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Madeleine Gallop </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 3, 2023</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="disability-and-covid-19-reproduction-blog" class="level1">
+<h1>Disability and COVID-19 Reproduction Blog</h1>
+<p>Please see the most up-to-date and revised verion of Chakraborty’s study here (R markdown file): <a href="https://madgallop.github.io/RPr-Chakraborty-2021/" class="uri">https://madgallop.github.io/RPr-Chakraborty-2021/</a></p>
+<section id="identification-of-errors-and-plan-for-modification" class="level2">
+<h2 class="anchored" data-anchor-id="identification-of-errors-and-plan-for-modification">Identification of errors and plan for modification</h2>
+<p>The following report will plan and implement revisions to the reproduction of Chakraborty’s 2021 study, <em>Social Inequities in the distribution of COVID-19: An Intra-Catagorial Analysis of People with Disabilities in the U.S.</em> This study was reproduced by Joseph Holler, Junyi Zhou, Peter Kedron, Drew An-Pham, Derrick Burt, and Madeleine Gallop will be implementing revisions to their work.</p>
+<p>In this report, I will be making six primary revisions:</p>
+<ol type="1">
+<li><p><em>MAP</em> The final choropleth map, depicting each county’s weight in the GEE model has a mistaken parameter causing it to only use half of the available orange color ramp. I plan to modfiy the code for this map to fix the color ramp.</p></li>
+<li><p><em>RATIONAL</em> The “rational for the updated report” section should, and currently does not, occur at the end of the reproduction study. I will move this section to the proper area.</p></li>
+<li><p><em>DISCUSSION</em> Any new results will be integrated with Emily’s discussion.</p></li>
+<li><p><em>CONCLUSION</em> There is not a seperate conclusions section that concludes whether the reproduction attempt was successful, and what the implications are for how the original study contributes to scientific knowledge. I will add this section, taking from the Discussion section as needed, to help the audience understand the contributions of the original study to scientific knowledge.</p></li>
+<li><p><em>MISSING DATA</em> The horizontal orientation of the missing data table with Kable and/or KableExtra functions should be improved. I will fix the orientation of this table.</p></li>
+<li><p><em>CREATEMAP</em> There are certain ways the efficiency of the study could be improved, such as writing a general purpose function ‘create_custom_map’ that can be reused throughout the study. Hopefully encapsulating certain code blocks in a function will improve the efficiency or elegancy of the code.</p></li>
+</ol>
+<p>In order to visualize and compare results, I plan to include before and after pictures of any visual changes, or orally describe the difference brought about by my revisions. I will include before and after screenshots of code blocks I modify, and/or write about any changes I make.</p>
+</section>
+<section id="implement-and-assess-changes-to-the-chakraborty-study" class="level2">
+<h2 class="anchored" data-anchor-id="implement-and-assess-changes-to-the-chakraborty-study">Implement and assess changes to the Chakraborty study</h2>
+<ol type="1">
+<li><em>MAP</em> I made a slight adjustment to the code for the final choropleth map, depicting each county’s weight in the GEE model. I commented out the parameter <strong>“midpoint=0,”</strong> which ultimetly rendered a map that spanned the entire orange color ramp.</li>
+</ol>
+<p><em>before:</em> <img src="disability_and_covid_reproduction_blog_files/figure-html/619f8198-5186-4c91-ad0b-aab5935ae59b.png" class="img-fluid" alt="image.png"></p>
+<p><em>after:</em> <img src="disability_and_covid_reproduction_blog_files/figure-html/5f0f69af-26dd-4dc8-8306-84f803d7fbf9.png" class="img-fluid" alt="image.png"></p>
+<ol start="2" type="1">
+<li><p><em>RATIONAL</em> Originally, the section titled “Rational for the updated report” came before the section called “Emily’s Discussion.” I moved it to the very end of the study.</p></li>
+<li><p><em>DISCUSSION</em> I changed the name of “Emily’s Discussion” to “Madeleine and Emily’s Integrated Discussion” and added a quick blurb about my contributions to the study, such as improving efficiency in the mapping code blocks and adding a seperate concluding section. I also added an introductory sentence to this section.</p></li>
+<li><p><em>CONCLUSION</em> There was not a seperate conclusions section that concludes whether the reproduction attempt was successful, and what the implications are for how the original study contributes to scientific knowledge. I added this section by drawing from Emily’s and expanding on certain sections of Emily’s concluson, making significant efforts to increase its clarity and readability. Hopefully, this section will help the audience quickly understand the contributions of the original study to scientific knowledge.</p></li>
+<li><p><em>MISSING DATA</em> I transposed the missing data table with Kable and/or KableExtra functions to be vertically oriented instead of horizontally oriented. I did this by piping t() after st_drop_geometry(). I also added a newline to create the table itself after modifying the data in it. Finally, I piped kable_styling() to add some lines and make the table more visually appealing.</p></li>
+</ol>
+<p><em>before:</em> <img src="disability_and_covid_reproduction_blog_files/figure-html/d241eada-a10c-47b2-8663-721b58d405c0.png" class="img-fluid" alt="Screenshot 2023-09-28 at 2.58.00 PM.png"></p>
+<p><em>after:</em> <img src="disability_and_covid_reproduction_blog_files/figure-html/1edae5cb-de2b-4608-aa7b-9921b03441e8.png" class="img-fluid" alt="Screenshot 2023-09-28 at 3.25.20 PM.png"></p>
+<ol start="6" type="1">
+<li><em>CREATEMAP</em> In order to increase the modularity, readability, consistency, and reuseability of the code, I defined a new function called ‘create_custom_map’ that takes various parameters as arguments and allows us to customize each map’s appearance and content. I turned the various variables that are special to different map vizualizations into function parameters. The function then uses these parameters to create a thematic map layer using the ‘tmap’ package. Thus, we are able to reuse the function to create different maps by specifying different values for these parameters. Now, when the code calls ‘create_custom_map’, each map will be customized. I applied changed the code for most of the maps in the reproduction study to use this function. I did not use the ‘create_custom_map’ function for a couple of the more complex maps in the reproduction study, including the Race Model Residual map (because the n=7 variable was difficult to generalize), and the SaTScan maps (due to their complexity). Creating a special function for map creation makes the overall code more modular and easy to read. It allows us to abstract away the details of map creation and focus on the uniqueness of each map. It also reduces inconsistencies between maps, and reduces the risk of errors.</li>
+</ol>
+<p><em>code for reuseable mapping</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="disability_and_covid_reproduction_blog_files/figure-html/90296199-3847-44f7-b303-82602a9e7a3a.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Screenshot 2023-10-05 at 10.49.38 AM.png</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="what-have-i-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-have-i-learned">What have I learned?</h2>
+<p>This reproduction and reanalysis study of Chakraborty’s (2021) research on the relationship between COVID-19 rates and demographic characteristics of people with disabilities in the continental United States has provided valuable insights into the challenges and opportunities of replicating scientific research.</p>
+<section id="importance-of-reproducibility" class="level3">
+<h3 class="anchored" data-anchor-id="importance-of-reproducibility">Importance of Reproducibility:</h3>
+<p>One of the primary lessons from this study is the critical importance of reproducibility in scientific research. Reproducing a study allows us to validate its findings and assess the robustness of its conclusions.</p>
+</section>
+<section id="sensitivity-to-methodological-choices" class="level3">
+<h3 class="anchored" data-anchor-id="sensitivity-to-methodological-choices">Sensitivity to Methodological Choices:</h3>
+<p>I’ve learned that small changes in methodology and computational environment can lead to variations in results. In this case, differences in the way spatial clusters were defined and COVID-19 risk was classified had notable effects on the outcomes. Researchers should be aware of the sensitivity of their analyses to such choices.</p>
+</section>
+<section id="complexity-of-spatial-epidemiology" class="level3">
+<h3 class="anchored" data-anchor-id="complexity-of-spatial-epidemiology">Complexity of Spatial Epidemiology:</h3>
+<p>Spatial analysis is a complex field, and the choice of statistical methods and software tools can impact the results. Researchers need to carefully consider the appropriateness of their analytical techniques for the specific research question and data at hand.</p>
+</section>
+<section id="ecological-fallacy-and-maup" class="level3">
+<h3 class="anchored" data-anchor-id="ecological-fallacy-and-maup">Ecological Fallacy and MAUP</h3>
+<p>The reproduction study and subsequent analysis highlighted the challenges posed by ecological fallacy and the modifiable areal unit problem (MAUP) in analyzing county-level data. These issues emphasize the importance of interpreting results cautiously and considering the spatial scale of analysis.</p>
+</section>
+<section id="methodological-changes" class="level3">
+<h3 class="anchored" data-anchor-id="methodological-changes">Methodological Changes:</h3>
+<p>The reproduction study deviated from the original study in several ways. 1. The reproduction study used the nonparametric Spearman’s correlation coefficient instead of Pearson’s correlation due to non-normal data, and redefining how COVID-19 risk clusters were classified. These changes were made to address limitations and improve the study’s rigor. 2. The reproduction study compared results between different software tools (SaTScan and SpatialEpi) for spatial cluster analysis, which revealed differences in cluster identification and relative risk calculations. 3. It also reconsidered how COVID-19 risk clusters were defined, opting for a cluster-based relative risk classification rather than a county-based one. This choice significantly impacted the results and the interpretation of clusters.</p>
+<p>Clearly, the reproduction study varied from the initial study in a number of ways. These deviations can be viewed as improvements and errors, depending on the specific aspect:</p>
+<ul>
+<li><p>Improvements: Some deviations, such as the use of Spearman’s correlation for non-normal data and the redefinition of cluster-based relative risk, were made to address methodological issues and improve the study’s validity.</p></li>
+<li><p>Errors: Deviations that led to differences in results, especially those that were not thoroughly justified or that introduced additional complexity without clear benefits, could be considered errors. For example, changes that created a larger number of GEE clusters added complexity to the analysis. But ultimetly, I think these differences ultimetly improved the study and contributed to a more accurate understanding of the results.</p></li>
+</ul>
+<section id="opportunities-for-improvement-and-further-research" class="level4">
+<h4 class="anchored" data-anchor-id="opportunities-for-improvement-and-further-research">Opportunities for Improvement and Further Research</h4>
+<ol type="1">
+<li><p>Clarity in Methodology: Ensuring clarity in the documentation of methodology, including detailed descriptions of how key parameters are determined, can improve the reproducibility of future studies.</p></li>
+<li><p>Alternative Statistical Approaches: Considering alternative statistical approaches for spatial epidemiology, particularly ones that account for spatial dependence without introducing unnecessary complexity, can lead to more robust findings.</p></li>
+<li><p>Individual-Level Analysis: Conducting individual-level analysis, where possible, can provide insights that go beyond ecological relationships and help mitigate issues related to ecological fallacy.</p></li>
+<li><p>Data Quality and Temporal Effects: Future studies should focus on collecting high-quality, up-to-date data to assess temporal effects more accurately, especially in rapidly changing situations like a pandemic.</p></li>
+<li><p>Replication Studies: To further test the theories established by this study, meaningful replication studies with larger sample sizes and diverse geographic regions should be conducted. These studies can help validate the findings and identify any regional variations.</p></li>
+</ol>
+<p>In conclusion, reproduction studies are essential for ensuring the validity and reliability of scientific research. They offer opportunities to improve research design, address methodological challenges, and contribute to the cumulative knowledge of a field. While deviations may occur, they should be justified, and their implications carefully considered. This study underscores the need for transparent reporting, robust methodology, and the ongoing pursuit of scientific rigor in spatial analysis of recent social trends and public health research.</p>
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
